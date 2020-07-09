@@ -1,0 +1,25 @@
+{
+	"name": "aten-matrix",
+	"version": "1.0.0",
+	"api_version": "1.0.0",
+	"keywords": [
+		"Matrix"
+	],
+	"manufacturer": "ATEN",
+	"product": "ATEN HDMI Matrix",
+	"shortname": "ATEN Matrix",
+	"description": "ATEN Matrix plugin for Companion",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/bitfocus/companion-module-aten-matrix.git"
+	},
+	"author": "Noah Callaway <noah@thecallaways.net>",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/bitfocus/companion-module-aten-matrix/issues"
+	}
+}
