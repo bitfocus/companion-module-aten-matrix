@@ -224,7 +224,7 @@ class instance extends instance_skel {
 
 		} else if (data.match(/connected to Output/)){
 			//Matrix Informing after query
-			this.processResponse(data);
+			this.processRoute(data);
 
 		} else if (data.match(/Load/)){
 			//Matrix informing after Load Profile
@@ -252,7 +252,7 @@ class instance extends instance_skel {
 	}
 
 	//Process response from Matrix after polling
-	processResponse(data) {
+	processRoute(data) {
 
 		var regex = /Input Port (\d*) is connected to Output Port (\d*)/gm;
 		var result = regex.exec(data);
@@ -265,7 +265,7 @@ class instance extends instance_skel {
 			this.checkFeedbacks('output_bg');
 
 		} else {
-			this.debug('Unknown in processResponse Regex got: ' + result);
+			this.debug('Unknown in processRoute Regex got: ' + result);
 		}
 	}
 
