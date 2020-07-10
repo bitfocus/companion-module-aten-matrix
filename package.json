@@ -6,8 +6,8 @@
 		"Matrix"
 	],
 	"manufacturer": "ATEN",
-	"product": "ATEN HDMI Matrix",
-	"shortname": "ATEN Matrix",
+	"product": "Matrix",
+	"shortname": "aten",
 	"description": "ATEN Matrix plugin for Companion",
 	"main": "index.js",
 	"scripts": {
