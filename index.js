@@ -132,10 +132,10 @@ class instance extends instance_skel {
 			delete this.socket;
 
 			this.login == false;
-			
-			if(this.heartbeatInterval !== undefined){
-				clearInterval(this.heartbeatInterval);
-			}
+		}
+
+		if(this.heartbeatInterval !== undefined){
+			clearInterval(this.heartbeatInterval);
 		}
 
 		if (this.config.port === undefined){
