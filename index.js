@@ -131,7 +131,7 @@ class instance extends instance_skel {
 			this.socket.destroy();
 			delete this.socket;
 
-			this.login == false;
+			this.login = false;
 		}
 
 		if(this.heartbeatInterval !== undefined){
@@ -304,7 +304,6 @@ class instance extends instance_skel {
 		this.initFeedbacks();
 
 		if (resetConnection === true || this.socket === undefined) {
-			this.login = false;
 			this.initTCP();
 		}
 	}
