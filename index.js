@@ -275,7 +275,6 @@ class instance extends instance_skel {
 		for (let i = 1; i <= this.config.device; i++) {
 			this.socket.write(`RO ${i}\r\n`);
 		}
-		this.checkFeedbacks('output_bg')
 	}
 
 	//Send new line to keep connection alive
