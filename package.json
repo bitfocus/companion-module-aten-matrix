@@ -21,5 +21,6 @@
 	"license": "MIT",
 	"bugs": {
 		"url": "https://github.com/bitfocus/companion-module-aten-matrix/issues"
-	}
+	},
+	"homepage": "https://github.com/bitfocus/companion-module-aten-matrix#readme"
 }
