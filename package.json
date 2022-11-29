@@ -1,14 +1,6 @@
 {
 	"name": "aten-matrix",
-	"version": "1.0.1",
-	"api_version": "1.0.0",
-	"keywords": [
-		"Matrix"
-	],
-	"manufacturer": "ATEN",
-	"product": "Matrix",
-	"shortname": "aten",
-	"description": "ATEN Matrix plugin for Companion",
+	"version": "2.0.0",
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
@@ -17,12 +9,7 @@
 		"type": "git",
 		"url": "git+https://github.com/bitfocus/companion-module-aten-matrix.git"
 	},
-	"author": "Noah Callaway <noah@thecallaways.net>",
 	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/bitfocus/companion-module-aten-matrix/issues"
-	},
-	"homepage": "https://github.com/bitfocus/companion-module-aten-matrix#readme",
 	"dependencies": {
 		"@companion-module/base": "~0.6.1"
 	},
