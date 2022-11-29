@@ -1,0 +1,30 @@
+{
+	"id": "aten-matrix",
+	"name": "aten-matrix",
+	"shortname": "aten",
+	"description": "ATEN Matrix plugin for Companion",
+	"version": "0.0.0",
+	"license": "MIT",
+	"repository": "git+https://github.com/bitfocus/companion-module-aten-matrix.git",
+	"bugs": "https://github.com/bitfocus/companion-module-aten-matrix/issues",
+	"maintainers": [
+		{
+			"name": "Noah Callaway",
+			"email": "noah@thecallaways.net"
+		}
+	],
+	"legacyIds": [],
+	"runtime": {
+		"type": "node18",
+		"api": "nodejs-ipc",
+		"apiVersion": "0.0.0",
+		"entrypoint": "../index.js"
+	},
+	"manufacturer": "ATEN",
+	"products": [
+		"Matrix"
+	],
+	"keywords": [
+		"Matrix"
+	]
+}
