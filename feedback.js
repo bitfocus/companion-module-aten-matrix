@@ -1,7 +1,6 @@
 import { combineRgb } from '@companion-module/base'
 
 export function getFeedbacks(instance) {
-	console.log(instance.config)
 	const feedbackDefinitions = {
 		output_bg: {
 			name: 'Crosspoint set',

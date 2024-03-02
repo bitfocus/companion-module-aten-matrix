@@ -50,7 +50,7 @@ class AtenMatrixInstance extends InstanceBase {
 	initTCP() {
 		var receivebuffer = ''
 		
-		this.updateStatus(InstanceStatus.Connecting, 'Connecting')
+		this.updateStatus(InstanceStatus.Connecting)
 		this.log('info', "Connecting to ATEN")
 
 		if(this.socket !== undefined) {
@@ -70,13 +70,6 @@ class AtenMatrixInstance extends InstanceBase {
 
 		if (this.config.host) {
 			this.socket = new TelnetHelper(this.config.host, this.config.port)
-
-			this.socket.on('status_change', (status, message) => {
-				console.log(status)
-				if(status !== this.STATUS_OK) {
-					this.updateStatus(InstanceStatus.Connecting, message)
-				}
-			})
 			
 			this.socket.on('error', (err) => {
 				this.updateStatus(InstanceStatus.ConnectionFailure, err.message)
@@ -115,6 +108,7 @@ class AtenMatrixInstance extends InstanceBase {
 				if (receivebuffer.match(/Enter Username:/)){
 
 					this.login = false
+					this.updateStatus(InstanceStatus.Connecting, "loggin in")
 					this.log('info', 'Entering Username')
 					this.socket.send(this.config.user + '\r\n')
 				} 
