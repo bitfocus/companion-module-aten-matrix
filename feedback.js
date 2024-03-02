@@ -1,45 +1,42 @@
-module.exports = {
+import { combineRgb } from '@companion-module/base'
 
-	getFeedbacks() {
-		var feedbacks = {
-			'output_bg': {
-				label: 'Change background colour by output',
-				description: 'If the input specified is in use by the output specified, change background color of the bank',
-				options: [{
-					type: 'colorpicker',
-					label: 'Foreground color',
-					id: 'fg',
-					default: this.rgb(255, 255, 255)
-				}, {
-					type: 'colorpicker',
-					label: 'Background color',
-					id: 'bg',
-					default: this.rgb(255, 0, 0)
-				}, {
+export function getFeedbacks(instance) {
+	console.log(instance.config)
+	const feedbackDefinitions = {
+		output_bg: {
+			name: 'Crosspoint set',
+			type: 'boolean',
+			description: 'Triggers if the input specified is in use by the output specified.',
+			defaultStyle: {
+				color: combineRgb(255, 255, 255),
+				bgcolor: combineRgb(255, 0, 0)
+			},
+			options: [
+				{
 					type: 'number',
 					label: 'Input',
 					id: 'input',
 					default: 1,
 					min: 1,
-					max: this.config.device
-				}, {
+					max: instance.config.device
+				}, 
+				{
 					type: 'number',
 					label: 'Output',
 					id: 'output',
 					default: 1,
 					min: 1,
-					max: this.config.device
-				}],
-				callback: (feedback, bank) => {
-					if (this.outputs[feedback.options.output] == feedback.options.input) {
-						return {
-							color: feedback.options.fg,
-							bgcolor: feedback.options.bg
-						};
-					}
+					max: instance.config.device
+				}
+			],
+			callback: (feedback) => {
+				if (instance.outputs[feedback.options.output] == feedback.options.input) {
+					return true
+				} else {
+					return false
 				}
 			}
 		}
-		return feedbacks
 	}
+	return feedbackDefinitions
 }
