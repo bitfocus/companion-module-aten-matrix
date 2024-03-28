@@ -19,7 +19,8 @@ export function getActions(instance) {
 			callback: async(action) => {
 				let opt = action.options
 				let num = (opt.num > 9 ? '' : '0') + opt.num
-				cmd = `LO ${num}`
+				let cmd = `LO ${num}`
+
 				instance.sendCmd(cmd)
 			}
 		},
@@ -44,9 +45,10 @@ export function getActions(instance) {
 				}
 			],
 			callback: async(action) => {
-				let src = (opt.src > 9 ? '' : '0') + opt.src;
-				let dst = (opt.dst > 9 ? '' : '0') + opt.dst;
-				cmd = `SS ${src},${dst}`;
+				let src = (opt.src > 9 ? '' : '0') + opt.src
+				let dst = (opt.dst > 9 ? '' : '0') + opt.dst
+				let cmd = `SS ${src},${dst}`
+
 				instance.sendCmd(cmd)
 			}
 		}

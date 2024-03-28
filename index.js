@@ -29,6 +29,7 @@ class AtenMatrixInstance extends InstanceBase {
 	//Send telnet command
 	sendCmd(cmd) {
 		if (cmd != undefined && cmd != ''){
+			this.log('debug', `Sending command to matrix: ${cmd}`)
 			this.socket.send(cmd + '\r\n')
 		}
 	}

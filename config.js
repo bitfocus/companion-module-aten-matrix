@@ -2,7 +2,7 @@ import { Regex } from '@companion-module/base'
 
 export const ConfigFields = [
 	{
-		type: 'text',
+		type: 'static-text',
 		id:   'info',
 		width: 12,
 		label: 'Information',
