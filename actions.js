@@ -45,6 +45,7 @@ export function getActions(instance) {
 				}
 			],
 			callback: async(action) => {
+				let opt = action.options
 				let src = (opt.src > 9 ? '' : '0') + opt.src
 				let dst = (opt.dst > 9 ? '' : '0') + opt.dst
 				let cmd = `SS ${src},${dst}`
