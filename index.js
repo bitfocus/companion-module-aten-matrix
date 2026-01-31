@@ -162,7 +162,7 @@ class AtenMatrixInstance extends InstanceBase {
 		var regex = /Switch input (\d*) to output (\d*)/gm
 		var result = regex.exec(data)
 
-		if (result.length >= 3) {
+		if (result && result.length >= 3) {
 
 			let src = parseInt(result[1], 10)
 			let dst = parseInt(result[2], 10)
@@ -181,7 +181,7 @@ class AtenMatrixInstance extends InstanceBase {
 		var regex = /Input Port (\d*) is connected to Output Port (\d*)/gm
 		var result = regex.exec(data)
 
-		if (result.length >= 3) {
+		if (result && result.length >= 3) {
 
 			let src = parseInt(result[1], 10)
 			let dst = parseInt(result[2], 10)
