@@ -18,3 +18,5 @@ And maybe others using same control protocol.
 
 ## Available Feedback
 * Crosspoint Active (Input to Output)
+
+Input 0 indicates that no input is connected ("Empty Port").
