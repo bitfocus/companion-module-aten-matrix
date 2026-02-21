@@ -162,7 +162,7 @@ class AtenMatrixInstance extends InstanceBase {
 		var regex = /Switch input (\d*) to output (\d*)/gm
 		var result = regex.exec(data)
 
-		if (result.length >= 3) {
+		if (result && result.length >= 3) {
 
 			let src = parseInt(result[1], 10)
 			let dst = parseInt(result[2], 10)
@@ -179,15 +179,20 @@ class AtenMatrixInstance extends InstanceBase {
 	processRoute(data) {
 
 		var regex = /Input Port (\d*) is connected to Output Port (\d*)/gm
+		var noport_regex = /No port is connected to Output Port (\d+)/gm
 		var result = regex.exec(data)
 
-		if (result.length >= 3) {
+		if (result && result.length >= 3) {
 
 			let src = parseInt(result[1], 10)
 			let dst = parseInt(result[2], 10)
 			this.outputs[dst] = src
 			this.checkFeedbacks('output_bg')
 
+		} else if (result = noport_regex.exec(data)) {
+			let dst = parseInt(result[1], 10)
+			this.outputs[dst] = 0
+			this.checkFeedbacks('output_bg')
 		} else {
 			this.log('warn', 'Unknown in processRoute Regex got: ' + result)
 		}
