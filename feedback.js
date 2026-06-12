@@ -16,7 +16,7 @@ export function getFeedbacks(instance) {
 					label: 'Input',
 					id: 'input',
 					default: 1,
-					min: 1,
+					min: 0,
 					max: instance.config.device
 				}, 
 				{
