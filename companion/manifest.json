@@ -1,4 +1,6 @@
 {
+	"$schema": "../node_modules/@companion-module/base/assets/manifest.schema.json",
+	"type": "connection",
 	"id": "aten-matrix",
 	"name": "aten-matrix",
 	"shortname": "aten",
@@ -15,16 +17,12 @@
 	],
 	"legacyIds": [],
 	"runtime": {
-		"type": "node18",
+		"type": "node22",
 		"api": "nodejs-ipc",
 		"apiVersion": "0.0.0",
-		"entrypoint": "../index.js"
+		"entrypoint": "../src/main.js"
 	},
 	"manufacturer": "ATEN",
-	"products": [
-		"Matrix"
-	],
-	"keywords": [
-		"Matrix"
-	]
+	"products": ["Matrix"],
+	"keywords": ["Matrix"]
 }
